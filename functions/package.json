@@ -4,7 +4,7 @@
   "description": "Cloud Functions for Happify 2 - AI proxy and notifications",
   "main": "lib/index.js",
   "engines": {
-    "node": "18"
+    "node": "20"
   },
   "scripts": {
     "lint": "eslint .",

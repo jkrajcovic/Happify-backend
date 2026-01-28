@@ -157,7 +157,7 @@ export const generatePersonalizedQuote = functions.https.onCall(
  */
 export const sendPersonalizedNotifications = functions.pubsub
   .schedule('every 1 minutes')
-  .onRun(async (context) => {
+  .onRun(async (_context) => {
     const now = new Date();
     const currentHour = now.getHours();
     const currentMinute = now.getMinutes();
@@ -250,7 +250,7 @@ Output only the final message text.`;
  * Generate daily cache key (one message per day)
  * Cache key based on date only (not mood/expectations)
  */
-function generateDailyCacheKey(userId: string): string {
+function generateDailyCacheKey(_userId: string): string {
   const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   return `daily_message_${today}`;
 }
@@ -278,44 +278,13 @@ async function saveToDailyCache(
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-  functions.logger.info(`Saved message to 24h cache`, {
+  functions.logger.info('Saved message to 24h cache', {
     userId,
     cacheKey,
     expiresAt: expiresAt.toISOString(),
   });
 }
 
-/**
- * Get today's cached message (if exists and not expired)
- * Optional: iOS app can use this to display same message throughout the day
- */
- */
-async function saveToCache(
-  userId: string,
-  cacheKey: string,
-  quote: any
-): Promise<void> {
-  const expiresAt = new Date();
-  expiresAt.setDate(expiresAt.getDate() + 30); // 30-day TTL
-
-  const cacheRef = db
-    .collection('users')
-    .doc(userId)
-    .collection('aiQuoteCache')
-    .doc(cacheKey);
-
-  await cacheRef.set({
-    text: quote.text,
-    author: quote.author,
-    categories: quote.categories,
-    generatedAt: admin.firestore.FieldValue.serverTimestamp(),
-    expiresAt: admin.firestore.Timestamp.fromDate(expiresAt),
-  });
-}
-
-/**
- * Update user usage stats
- */
 /**
  * Update user's AI usage stats
  * Track total AI messages generated (no quota limit in new logic)

@@ -15,6 +15,7 @@ module.exports = {
   },
   ignorePatterns: [
     "/lib/**/*", // Ignore built files
+    ".eslintrc.js", // Ignore this config file
   ],
   plugins: [
     "@typescript-eslint",
@@ -23,5 +24,12 @@ module.exports = {
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+      },
+    ],
   },
 };
