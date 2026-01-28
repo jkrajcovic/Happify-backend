@@ -1,0 +1,57 @@
+{
+  "conditions": [],
+  "parameters": {
+    "quotes_database": {
+      "defaultValue": {
+        "value": "[]"
+      },
+      "description": "200+ motivational quotes organized by categories and moods. Updated without app releases.",
+      "valueType": "JSON"
+    },
+    "fallback_notification_messages": {
+      "defaultValue": {
+        "value": "[\"Time for your daily mood check ✨\", \"How's your heart feeling today?\", \"Your daily moment of reflection awaits\", \"Time to check in with yourself\"]"
+      },
+      "description": "Fallback notification messages when AI is unavailable",
+      "valueType": "JSON"
+    },
+    "feature_ai_quotes_enabled": {
+      "defaultValue": {
+        "value": "true"
+      },
+      "description": "Feature flag to enable/disable AI quote generation globally",
+      "valueType": "BOOLEAN"
+    },
+    "ai_daily_quota_per_user": {
+      "defaultValue": {
+        "value": "5"
+      },
+      "description": "Number of AI quotes per day per user (default: 5)",
+      "valueType": "NUMBER"
+    },
+    "cache_ttl_days": {
+      "defaultValue": {
+        "value": "30"
+      },
+      "description": "Cache time-to-live in days for AI-generated quotes (default: 30)",
+      "valueType": "NUMBER"
+    },
+    "maintenance_mode": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "Enable maintenance mode (disables AI features, shows fallback quotes)",
+      "valueType": "BOOLEAN"
+    }
+  },
+  "version": {
+    "versionNumber": "1",
+    "updateTime": "2026-01-28T00:00:00Z",
+    "updateUser": {
+      "email": "juraj@krajcovic.me"
+    },
+    "description": "Initial Remote Config template for Happify 2",
+    "updateOrigin": "ADMIN_SDK_NODE",
+    "updateType": "INCREMENTAL_UPDATE"
+  }
+}
