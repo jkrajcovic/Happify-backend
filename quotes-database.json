@@ -1,0 +1,1118 @@
+[
+  {
+    "text": "The only way out is through.",
+    "author": "Robert Frost",
+    "categories": ["resilience", "courage"],
+    "moods": ["sad", "anxious", "overwhelmed"]
+  },
+  {
+    "text": "Joy is not in things; it is in us.",
+    "author": "Richard Wagner",
+    "categories": ["happiness", "gratitude"],
+    "moods": ["happy", "grateful", "content"]
+  },
+  {
+    "text": "Peace comes from within. Do not seek it without.",
+    "author": "Buddha",
+    "categories": ["mindfulness", "inner_peace"],
+    "moods": ["anxious", "stressed", "calm"]
+  },
+  {
+    "text": "Every moment is a fresh beginning.",
+    "author": "T.S. Eliot",
+    "categories": ["motivation", "new_starts"],
+    "moods": ["sad", "hopeful", "uncertain"]
+  },
+  {
+    "text": "The present moment is filled with joy and happiness. If you are attentive, you will see it.",
+    "author": "Thich Nhat Hanh",
+    "categories": ["mindfulness", "presence"],
+    "moods": ["anxious", "calm", "grateful"]
+  },
+  {
+    "text": "You are braver than you believe, stronger than you seem, and smarter than you think.",
+    "author": "A.A. Milne",
+    "categories": ["confidence", "courage"],
+    "moods": ["sad", "uncertain", "anxious"]
+  },
+  {
+    "text": "Happiness is not something ready made. It comes from your own actions.",
+    "author": "Dalai Lama",
+    "categories": ["happiness", "action"],
+    "moods": ["sad", "hopeful", "motivated"]
+  },
+  {
+    "text": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    "author": "Nelson Mandela",
+    "categories": ["resilience", "perseverance"],
+    "moods": ["sad", "defeated", "hopeful"]
+  },
+  {
+    "text": "In the midst of winter, I found there was, within me, an invincible summer.",
+    "author": "Albert Camus",
+    "categories": ["resilience", "inner_strength"],
+    "moods": ["sad", "depressed", "hopeful"]
+  },
+  {
+    "text": "Gratitude turns what we have into enough.",
+    "author": "Melody Beattie",
+    "categories": ["gratitude", "contentment"],
+    "moods": ["grateful", "content", "peaceful"]
+  },
+  {
+    "text": "Calm mind brings inner strength and self-confidence.",
+    "author": "Dalai Lama",
+    "categories": ["mindfulness", "confidence"],
+    "moods": ["anxious", "stressed", "calm"]
+  },
+  {
+    "text": "The wound is the place where the Light enters you.",
+    "author": "Rumi",
+    "categories": ["healing", "growth"],
+    "moods": ["sad", "hurt", "healing"]
+  },
+  {
+    "text": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+    "author": "Ralph Waldo Emerson",
+    "categories": ["inner_strength", "confidence"],
+    "moods": ["uncertain", "anxious", "hopeful"]
+  },
+  {
+    "text": "It is during our darkest moments that we must focus to see the light.",
+    "author": "Aristotle",
+    "categories": ["hope", "perseverance"],
+    "moods": ["sad", "depressed", "hopeful"]
+  },
+  {
+    "text": "The way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney",
+    "categories": ["motivation", "action"],
+    "moods": ["uncertain", "procrastinating", "motivated"]
+  },
+  {
+    "text": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt",
+    "categories": ["confidence", "belief"],
+    "moods": ["uncertain", "doubtful", "motivated"]
+  },
+  {
+    "text": "The only impossible journey is the one you never begin.",
+    "author": "Tony Robbins",
+    "categories": ["motivation", "courage"],
+    "moods": ["fearful", "uncertain", "motivated"]
+  },
+  {
+    "text": "Act as if what you do makes a difference. It does.",
+    "author": "William James",
+    "categories": ["purpose", "motivation"],
+    "moods": ["unmotivated", "purposeless", "inspired"]
+  },
+  {
+    "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "author": "Winston Churchill",
+    "categories": ["resilience", "courage"],
+    "moods": ["defeated", "uncertain", "determined"]
+  },
+  {
+    "text": "Keep your face always toward the sunshine and shadows will fall behind you.",
+    "author": "Walt Whitman",
+    "categories": ["optimism", "positivity"],
+    "moods": ["sad", "hopeful", "optimistic"]
+  },
+  {
+    "text": "Your time is limited, don't waste it living someone else's life.",
+    "author": "Steve Jobs",
+    "categories": ["authenticity", "purpose"],
+    "moods": ["confused", "lost", "inspired"]
+  },
+  {
+    "text": "The best time to plant a tree was 20 years ago. The second best time is now.",
+    "author": "Chinese Proverb",
+    "categories": ["motivation", "action"],
+    "moods": ["regretful", "uncertain", "motivated"]
+  },
+  {
+    "text": "Everything you've ever wanted is on the other side of fear.",
+    "author": "George Addair",
+    "categories": ["courage", "growth"],
+    "moods": ["fearful", "anxious", "brave"]
+  },
+  {
+    "text": "Fall seven times, stand up eight.",
+    "author": "Japanese Proverb",
+    "categories": ["resilience", "perseverance"],
+    "moods": ["defeated", "tired", "determined"]
+  },
+  {
+    "text": "The only person you are destined to become is the person you decide to be.",
+    "author": "Ralph Waldo Emerson",
+    "categories": ["self_determination", "growth"],
+    "moods": ["uncertain", "confused", "empowered"]
+  },
+  {
+    "text": "Courage doesn't always roar. Sometimes it's the quiet voice saying, 'I will try again tomorrow.'",
+    "author": "Mary Anne Radmacher",
+    "categories": ["courage", "perseverance"],
+    "moods": ["tired", "defeated", "hopeful"]
+  },
+  {
+    "text": "You must be the change you wish to see in the world.",
+    "author": "Mahatma Gandhi",
+    "categories": ["action", "purpose"],
+    "moods": ["frustrated", "motivated", "purposeful"]
+  },
+  {
+    "text": "A journey of a thousand miles begins with a single step.",
+    "author": "Lao Tzu",
+    "categories": ["motivation", "action"],
+    "moods": ["overwhelmed", "uncertain", "motivated"]
+  },
+  {
+    "text": "Life is 10% what happens to you and 90% how you react to it.",
+    "author": "Charles R. Swindoll",
+    "categories": ["mindset", "resilience"],
+    "moods": ["frustrated", "reactive", "empowered"]
+  },
+  {
+    "text": "The best way to predict the future is to create it.",
+    "author": "Peter Drucker",
+    "categories": ["action", "empowerment"],
+    "moods": ["uncertain", "anxious", "empowered"]
+  },
+  {
+    "text": "You are never too old to set another goal or to dream a new dream.",
+    "author": "C.S. Lewis",
+    "categories": ["hope", "new_starts"],
+    "moods": ["stuck", "hopeless", "inspired"]
+  },
+  {
+    "text": "The future belongs to those who believe in the beauty of their dreams.",
+    "author": "Eleanor Roosevelt",
+    "categories": ["hope", "dreams"],
+    "moods": ["hopeful", "inspired", "dreamy"]
+  },
+  {
+    "text": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius",
+    "categories": ["perseverance", "patience"],
+    "moods": ["tired", "frustrated", "persistent"]
+  },
+  {
+    "text": "Everything has beauty, but not everyone sees it.",
+    "author": "Confucius",
+    "categories": ["mindfulness", "perspective"],
+    "moods": ["negative", "critical", "appreciative"]
+  },
+  {
+    "text": "Difficult roads often lead to beautiful destinations.",
+    "author": "Anonymous",
+    "categories": ["hope", "perseverance"],
+    "moods": ["struggling", "tired", "hopeful"]
+  },
+  {
+    "text": "Stars can't shine without darkness.",
+    "author": "Anonymous",
+    "categories": ["hope", "resilience"],
+    "moods": ["sad", "dark", "hopeful"]
+  },
+  {
+    "text": "Your limitation—it's only your imagination.",
+    "author": "Anonymous",
+    "categories": ["empowerment", "belief"],
+    "moods": ["limited", "stuck", "empowered"]
+  },
+  {
+    "text": "Great things never come from comfort zones.",
+    "author": "Anonymous",
+    "categories": ["courage", "growth"],
+    "moods": ["comfortable", "stagnant", "motivated"]
+  },
+  {
+    "text": "Dream it. Wish it. Do it.",
+    "author": "Anonymous",
+    "categories": ["action", "motivation"],
+    "moods": ["dreamy", "uncertain", "determined"]
+  },
+  {
+    "text": "Success doesn't just find you. You have to go out and get it.",
+    "author": "Anonymous",
+    "categories": ["action", "determination"],
+    "moods": ["passive", "waiting", "proactive"]
+  },
+  {
+    "text": "The harder you work for something, the greater you'll feel when you achieve it.",
+    "author": "Anonymous",
+    "categories": ["achievement", "effort"],
+    "moods": ["working", "tired", "motivated"]
+  },
+  {
+    "text": "Don't stop when you're tired. Stop when you're done.",
+    "author": "Anonymous",
+    "categories": ["perseverance", "determination"],
+    "moods": ["tired", "quitting", "determined"]
+  },
+  {
+    "text": "Wake up with determination. Go to bed with satisfaction.",
+    "author": "Anonymous",
+    "categories": ["motivation", "achievement"],
+    "moods": ["unmotivated", "lazy", "energized"]
+  },
+  {
+    "text": "Do something today that your future self will thank you for.",
+    "author": "Anonymous",
+    "categories": ["action", "future_thinking"],
+    "moods": ["procrastinating", "uncertain", "proactive"]
+  },
+  {
+    "text": "Little things make big days.",
+    "author": "Anonymous",
+    "categories": ["mindfulness", "gratitude"],
+    "moods": ["unappreciative", "rushing", "present"]
+  },
+  {
+    "text": "It's going to be hard, but hard does not mean impossible.",
+    "author": "Anonymous",
+    "categories": ["courage", "determination"],
+    "moods": ["fearful", "doubtful", "brave"]
+  },
+  {
+    "text": "Don't wait for opportunity. Create it.",
+    "author": "Anonymous",
+    "categories": ["action", "empowerment"],
+    "moods": ["waiting", "passive", "proactive"]
+  },
+  {
+    "text": "Sometimes we're tested not to show our weaknesses, but to discover our strengths.",
+    "author": "Anonymous",
+    "categories": ["resilience", "growth"],
+    "moods": ["challenged", "tested", "strong"]
+  },
+  {
+    "text": "The key to success is to focus on goals, not obstacles.",
+    "author": "Anonymous",
+    "categories": ["focus", "achievement"],
+    "moods": ["distracted", "blocked", "focused"]
+  },
+  {
+    "text": "Dream bigger. Do bigger.",
+    "author": "Anonymous",
+    "categories": ["ambition", "action"],
+    "moods": ["small_thinking", "limited", "ambitious"]
+  },
+  {
+    "text": "You don't have to be great to start, but you have to start to be great.",
+    "author": "Zig Ziglar",
+    "categories": ["motivation", "action"],
+    "moods": ["hesitant", "perfectionist", "starting"]
+  },
+  {
+    "text": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt",
+    "categories": ["confidence", "future"],
+    "moods": ["doubtful", "uncertain", "confident"]
+  },
+  {
+    "text": "Be yourself; everyone else is already taken.",
+    "author": "Oscar Wilde",
+    "categories": ["authenticity", "self_acceptance"],
+    "moods": ["insecure", "comparing", "authentic"]
+  },
+  {
+    "text": "To live is the rarest thing in the world. Most people exist, that is all.",
+    "author": "Oscar Wilde",
+    "categories": ["presence", "living_fully"],
+    "moods": ["numb", "existing", "alive"]
+  },
+  {
+    "text": "Happiness is not by chance, but by choice.",
+    "author": "Jim Rohn",
+    "categories": ["happiness", "choice"],
+    "moods": ["sad", "victim", "empowered"]
+  },
+  {
+    "text": "The way I see it, if you want the rainbow, you gotta put up with the rain.",
+    "author": "Dolly Parton",
+    "categories": ["perseverance", "optimism"],
+    "moods": ["struggling", "frustrated", "hopeful"]
+  },
+  {
+    "text": "Life isn't about finding yourself. Life is about creating yourself.",
+    "author": "George Bernard Shaw",
+    "categories": ["growth", "self_creation"],
+    "moods": ["lost", "searching", "creating"]
+  },
+  {
+    "text": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+    "author": "Zig Ziglar",
+    "categories": ["growth", "achievement"],
+    "moods": ["working", "striving", "growing"]
+  },
+  {
+    "text": "Either you run the day or the day runs you.",
+    "author": "Jim Rohn",
+    "categories": ["control", "empowerment"],
+    "moods": ["overwhelmed", "reactive", "proactive"]
+  },
+  {
+    "text": "If you're going through hell, keep going.",
+    "author": "Winston Churchill",
+    "categories": ["perseverance", "resilience"],
+    "moods": ["suffering", "giving_up", "persistent"]
+  },
+  {
+    "text": "The mind is everything. What you think you become.",
+    "author": "Buddha",
+    "categories": ["mindset", "transformation"],
+    "moods": ["negative", "doubtful", "positive"]
+  },
+  {
+    "text": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+    "author": "Buddha",
+    "categories": ["mindfulness", "presence"],
+    "moods": ["regretful", "anxious", "present"]
+  },
+  {
+    "text": "You can't go back and change the beginning, but you can start where you are and change the ending.",
+    "author": "C.S. Lewis",
+    "categories": ["hope", "new_starts"],
+    "moods": ["regretful", "stuck", "hopeful"]
+  },
+  {
+    "text": "A champion is defined not by their wins but by how they can recover when they fall.",
+    "author": "Serena Williams",
+    "categories": ["resilience", "recovery"],
+    "moods": ["defeated", "failed", "recovering"]
+  },
+  {
+    "text": "The greatest weapon against stress is our ability to choose one thought over another.",
+    "author": "William James",
+    "categories": ["stress_management", "choice"],
+    "moods": ["stressed", "anxious", "calm"]
+  },
+  {
+    "text": "Your present circumstances don't determine where you can go; they merely determine where you start.",
+    "author": "Nido Qubein",
+    "categories": ["hope", "potential"],
+    "moods": ["stuck", "limited", "hopeful"]
+  },
+  {
+    "text": "The secret of change is to focus all of your energy not on fighting the old, but on building the new.",
+    "author": "Socrates",
+    "categories": ["change", "growth"],
+    "moods": ["stuck", "resistant", "growing"]
+  },
+  {
+    "text": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+    "author": "Albert Einstein",
+    "categories": ["momentum", "perseverance"],
+    "moods": ["stuck", "stagnant", "moving"]
+  },
+  {
+    "text": "It is not the mountain we conquer but ourselves.",
+    "author": "Edmund Hillary",
+    "categories": ["self_mastery", "growth"],
+    "moods": ["challenged", "struggling", "conquering"]
+  },
+  {
+    "text": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "categories": ["passion", "work"],
+    "moods": ["unmotivated", "unfulfilled", "passionate"]
+  },
+  {
+    "text": "Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.",
+    "author": "Roy T. Bennett",
+    "categories": ["confidence", "self_belief"],
+    "moods": ["doubtful", "insecure", "confident"]
+  },
+  {
+    "text": "Someone is sitting in the shade today because someone planted a tree a long time ago.",
+    "author": "Warren Buffett",
+    "categories": ["patience", "long_term_thinking"],
+    "moods": ["impatient", "frustrated", "patient"]
+  },
+  {
+    "text": "The struggle you're in today is developing the strength you need for tomorrow.",
+    "author": "Anonymous",
+    "categories": ["resilience", "growth"],
+    "moods": ["struggling", "suffering", "growing"]
+  },
+  {
+    "text": "Strive not to be a success, but rather to be of value.",
+    "author": "Albert Einstein",
+    "categories": ["purpose", "contribution"],
+    "moods": ["empty", "purposeless", "purposeful"]
+  },
+  {
+    "text": "Two roads diverged in a wood, and I took the one less traveled by, and that has made all the difference.",
+    "author": "Robert Frost",
+    "categories": ["courage", "individuality"],
+    "moods": ["conforming", "uncertain", "individual"]
+  },
+  {
+    "text": "I have not failed. I've just found 10,000 ways that won't work.",
+    "author": "Thomas Edison",
+    "categories": ["perseverance", "learning"],
+    "moods": ["failed", "defeated", "learning"]
+  },
+  {
+    "text": "A person who never made a mistake never tried anything new.",
+    "author": "Albert Einstein",
+    "categories": ["courage", "learning"],
+    "moods": ["fearful", "perfectionistic", "brave"]
+  },
+  {
+    "text": "The beautiful thing about learning is that nobody can take it away from you.",
+    "author": "B.B. King",
+    "categories": ["learning", "growth"],
+    "moods": ["growing", "learning", "accomplished"]
+  },
+  {
+    "text": "Turn your wounds into wisdom.",
+    "author": "Oprah Winfrey",
+    "categories": ["healing", "wisdom"],
+    "moods": ["hurt", "wounded", "healing"]
+  },
+  {
+    "text": "The only person you should try to be better than is the person you were yesterday.",
+    "author": "Anonymous",
+    "categories": ["growth", "self_improvement"],
+    "moods": ["comparing", "competing", "growing"]
+  },
+  {
+    "text": "Start where you are. Use what you have. Do what you can.",
+    "author": "Arthur Ashe",
+    "categories": ["action", "resourcefulness"],
+    "moods": ["limited", "stuck", "proactive"]
+  },
+  {
+    "text": "The greatest discovery of all time is that a person can change their future by merely changing their attitude.",
+    "author": "Oprah Winfrey",
+    "categories": ["mindset", "empowerment"],
+    "moods": ["negative", "victim", "empowered"]
+  },
+  {
+    "text": "Don't judge each day by the harvest you reap but by the seeds that you plant.",
+    "author": "Robert Louis Stevenson",
+    "categories": ["patience", "process"],
+    "moods": ["impatient", "results_focused", "process_focused"]
+  },
+  {
+    "text": "It always seems impossible until it's done.",
+    "author": "Nelson Mandela",
+    "categories": ["courage", "achievement"],
+    "moods": ["doubtful", "impossible", "possible"]
+  },
+  {
+    "text": "Be strong enough to stand alone, smart enough to know when you need help, and brave enough to ask for it.",
+    "author": "Anonymous",
+    "categories": ["courage", "wisdom"],
+    "moods": ["struggling", "proud", "humble"]
+  },
+  {
+    "text": "The best revenge is massive success.",
+    "author": "Frank Sinatra",
+    "categories": ["motivation", "success"],
+    "moods": ["vengeful", "wronged", "motivated"]
+  },
+  {
+    "text": "You miss 100% of the shots you don't take.",
+    "author": "Wayne Gretzky",
+    "categories": ["courage", "action"],
+    "moods": ["hesitant", "fearful", "bold"]
+  },
+  {
+    "text": "Whether you think you can or you think you can't, you're right.",
+    "author": "Henry Ford",
+    "categories": ["mindset", "belief"],
+    "moods": ["doubtful", "uncertain", "confident"]
+  },
+  {
+    "text": "The two most important days in your life are the day you are born and the day you find out why.",
+    "author": "Mark Twain",
+    "categories": ["purpose", "meaning"],
+    "moods": ["lost", "searching", "purposeful"]
+  },
+  {
+    "text": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "author": "Mahatma Gandhi",
+    "categories": ["presence", "learning"],
+    "moods": ["complacent", "stagnant", "alive"]
+  },
+  {
+    "text": "Your life does not get better by chance, it gets better by change.",
+    "author": "Jim Rohn",
+    "categories": ["change", "action"],
+    "moods": ["stuck", "waiting", "changing"]
+  },
+  {
+    "text": "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart.",
+    "author": "Roy T. Bennett",
+    "categories": ["courage", "dreams"],
+    "moods": ["fearful", "controlled", "brave"]
+  },
+  {
+    "text": "Do one thing every day that scares you.",
+    "author": "Eleanor Roosevelt",
+    "categories": ["courage", "growth"],
+    "moods": ["fearful", "comfortable", "brave"]
+  },
+  {
+    "text": "It is never too late to be what you might have been.",
+    "author": "George Eliot",
+    "categories": ["hope", "potential"],
+    "moods": ["regretful", "resigned", "hopeful"]
+  },
+  {
+    "text": "The difference between ordinary and extraordinary is that little extra.",
+    "author": "Jimmy Johnson",
+    "categories": ["excellence", "effort"],
+    "moods": ["settling", "ordinary", "extraordinary"]
+  },
+  {
+    "text": "You are confined only by the walls you build yourself.",
+    "author": "Andrew Murphy",
+    "categories": ["empowerment", "freedom"],
+    "moods": ["trapped", "limited", "free"]
+  },
+  {
+    "text": "The person who says it cannot be done should not interrupt the person who is doing it.",
+    "author": "Chinese Proverb",
+    "categories": ["determination", "action"],
+    "moods": ["determined", "doing", "achieving"]
+  },
+  {
+    "text": "What we think, we become.",
+    "author": "Buddha",
+    "categories": ["mindset", "transformation"],
+    "moods": ["negative", "positive", "transforming"]
+  },
+  {
+    "text": "The only thing standing between you and your goal is the story you keep telling yourself.",
+    "author": "Jordan Belfort",
+    "categories": ["mindset", "self_talk"],
+    "moods": ["blocked", "limited", "empowered"]
+  },
+  {
+    "text": "You cannot have a positive life with a negative mind.",
+    "author": "Anonymous",
+    "categories": ["positivity", "mindset"],
+    "moods": ["negative", "cynical", "positive"]
+  },
+  {
+    "text": "Don't let yesterday take up too much of today.",
+    "author": "Will Rogers",
+    "categories": ["presence", "letting_go"],
+    "moods": ["regretful", "stuck", "present"]
+  },
+  {
+    "text": "You don't always need a plan. Sometimes you just need to breathe, trust, let go and see what happens.",
+    "author": "Mandy Hale",
+    "categories": ["trust", "letting_go"],
+    "moods": ["controlling", "anxious", "trusting"]
+  },
+  {
+    "text": "If you can dream it, you can do it.",
+    "author": "Walt Disney",
+    "categories": ["dreams", "possibility"],
+    "moods": ["dreaming", "doubting", "believing"]
+  },
+  {
+    "text": "Stop being afraid of what could go wrong and start being excited about what could go right.",
+    "author": "Tony Robbins",
+    "categories": ["optimism", "mindset"],
+    "moods": ["fearful", "worried", "excited"]
+  },
+  {
+    "text": "It's not whether you get knocked down, it's whether you get up.",
+    "author": "Vince Lombardi",
+    "categories": ["resilience", "recovery"],
+    "moods": ["defeated", "down", "rising"]
+  },
+  {
+    "text": "Life begins at the end of your comfort zone.",
+    "author": "Neale Donald Walsch",
+    "categories": ["courage", "growth"],
+    "moods": ["comfortable", "stagnant", "growing"]
+  },
+  {
+    "text": "The question isn't who is going to let me; it's who is going to stop me.",
+    "author": "Ayn Rand",
+    "categories": ["determination", "independence"],
+    "moods": ["seeking_permission", "dependent", "independent"]
+  },
+  {
+    "text": "Challenges are what make life interesting. Overcoming them is what makes life meaningful.",
+    "author": "Joshua Marine",
+    "categories": ["resilience", "meaning"],
+    "moods": ["challenged", "struggling", "purposeful"]
+  },
+  {
+    "text": "You don't need to be perfect to be amazing.",
+    "author": "Anonymous",
+    "categories": ["self_acceptance", "confidence"],
+    "moods": ["perfectionist", "inadequate", "accepting"]
+  },
+  {
+    "text": "Be the change you want to see happen.",
+    "author": "Anonymous",
+    "categories": ["action", "leadership"],
+    "moods": ["complaining", "waiting", "acting"]
+  },
+  {
+    "text": "Your vibe attracts your tribe.",
+    "author": "Anonymous",
+    "categories": ["positivity", "connection"],
+    "moods": ["lonely", "misunderstood", "connected"]
+  },
+  {
+    "text": "Progress, not perfection.",
+    "author": "Anonymous",
+    "categories": ["growth", "self_compassion"],
+    "moods": ["perfectionist", "frustrated", "progressing"]
+  },
+  {
+    "text": "Take the risk or lose the chance.",
+    "author": "Anonymous",
+    "categories": ["courage", "opportunity"],
+    "moods": ["hesitant", "safe", "brave"]
+  },
+  {
+    "text": "Be patient with yourself. Nothing in nature blooms all year.",
+    "author": "Anonymous",
+    "categories": ["patience", "self_compassion"],
+    "moods": ["impatient", "harsh", "compassionate"]
+  },
+  {
+    "text": "You are enough just as you are.",
+    "author": "Meghan Markle",
+    "categories": ["self_acceptance", "worth"],
+    "moods": ["inadequate", "unworthy", "enough"]
+  },
+  {
+    "text": "Sometimes the smallest step in the right direction ends up being the biggest step of your life.",
+    "author": "Anonymous",
+    "categories": ["action", "small_steps"],
+    "moods": ["overwhelmed", "stuck", "moving"]
+  },
+  {
+    "text": "Breathe. It's just a bad day, not a bad life.",
+    "author": "Anonymous",
+    "categories": ["perspective", "mindfulness"],
+    "moods": ["overwhelmed", "catastrophizing", "grounded"]
+  },
+  {
+    "text": "You are allowed to be both a masterpiece and a work in progress simultaneously.",
+    "author": "Sophia Bush",
+    "categories": ["self_acceptance", "growth"],
+    "moods": ["inadequate", "perfectionist", "accepting"]
+  },
+  {
+    "text": "Be yourself. An original is worth more than a copy.",
+    "author": "Anonymous",
+    "categories": ["authenticity", "self_worth"],
+    "moods": ["comparing", "imitating", "authentic"]
+  },
+  {
+    "text": "You got this. One day at a time.",
+    "author": "Anonymous",
+    "categories": ["encouragement", "perseverance"],
+    "moods": ["overwhelmed", "anxious", "capable"]
+  },
+  {
+    "text": "Your mental health is a priority, not a luxury.",
+    "author": "Anonymous",
+    "categories": ["self_care", "wellness"],
+    "moods": ["guilty", "overworked", "caring"]
+  },
+  {
+    "text": "It's okay to not be okay. It's not okay to stay that way.",
+    "author": "Anonymous",
+    "categories": ["healing", "growth"],
+    "moods": ["struggling", "stuck", "healing"]
+  },
+  {
+    "text": "Your value doesn't decrease based on someone's inability to see your worth.",
+    "author": "Anonymous",
+    "categories": ["self_worth", "confidence"],
+    "moods": ["unappreciated", "rejected", "worthy"]
+  },
+  {
+    "text": "Worrying does not take away tomorrow's troubles. It takes away today's peace.",
+    "author": "Randy Armstrong",
+    "categories": ["anxiety", "peace"],
+    "moods": ["worried", "anxious", "peaceful"]
+  },
+  {
+    "text": "You can't start the next chapter if you keep re-reading the last one.",
+    "author": "Anonymous",
+    "categories": ["letting_go", "moving_forward"],
+    "moods": ["stuck", "past_focused", "forward"]
+  },
+  {
+    "text": "Self-care is how you take your power back.",
+    "author": "Lalah Delia",
+    "categories": ["self_care", "empowerment"],
+    "moods": ["depleted", "powerless", "empowered"]
+  },
+  {
+    "text": "The comeback is always stronger than the setback.",
+    "author": "Anonymous",
+    "categories": ["resilience", "recovery"],
+    "moods": ["setback", "defeated", "recovering"]
+  },
+  {
+    "text": "Don't stop until you're proud.",
+    "author": "Anonymous",
+    "categories": ["achievement", "perseverance"],
+    "moods": ["dissatisfied", "quitting", "striving"]
+  },
+  {
+    "text": "You were born to be real, not to be perfect.",
+    "author": "Ralph Marston",
+    "categories": ["authenticity", "self_acceptance"],
+    "moods": ["perfectionist", "fake", "real"]
+  },
+  {
+    "text": "The only disability in life is a bad attitude.",
+    "author": "Scott Hamilton",
+    "categories": ["mindset", "positivity"],
+    "moods": ["negative", "victim", "positive"]
+  },
+  {
+    "text": "You are the artist of your own life. Don't hand the paintbrush to anyone else.",
+    "author": "Anonymous",
+    "categories": ["empowerment", "self_direction"],
+    "moods": ["controlled", "influenced", "empowered"]
+  },
+  {
+    "text": "Let your smile change the world, but don't let the world change your smile.",
+    "author": "Connor Franta",
+    "categories": ["positivity", "resilience"],
+    "moods": ["influenced", "changing", "authentic"]
+  },
+  {
+    "text": "You are not a drop in the ocean. You are the entire ocean in a drop.",
+    "author": "Rumi",
+    "categories": ["self_worth", "significance"],
+    "moods": ["insignificant", "small", "significant"]
+  },
+  {
+    "text": "The best view comes after the hardest climb.",
+    "author": "Anonymous",
+    "categories": ["perseverance", "reward"],
+    "moods": ["struggling", "climbing", "hopeful"]
+  },
+  {
+    "text": "One small positive thought can change your whole day.",
+    "author": "Zig Ziglar",
+    "categories": ["positivity", "mindset"],
+    "moods": ["negative", "bad_day", "hopeful"]
+  },
+  {
+    "text": "You are stronger than you know. More capable than you ever dreamed. And you are loved more than you could possibly imagine.",
+    "author": "Anonymous",
+    "categories": ["encouragement", "love"],
+    "moods": ["weak", "incapable", "strong"]
+  },
+  {
+    "text": "Life doesn't get easier. You just get stronger.",
+    "author": "Anonymous",
+    "categories": ["resilience", "growth"],
+    "moods": ["struggling", "wishing", "strengthening"]
+  },
+  {
+    "text": "You can't pour from an empty cup. Take care of yourself first.",
+    "author": "Anonymous",
+    "categories": ["self_care", "boundaries"],
+    "moods": ["depleted", "sacrificing", "caring"]
+  },
+  {
+    "text": "Healing is not linear.",
+    "author": "Anonymous",
+    "categories": ["healing", "patience"],
+    "moods": ["frustrated", "healing", "patient"]
+  },
+  {
+    "text": "You are doing better than you think.",
+    "author": "Anonymous",
+    "categories": ["encouragement", "self_compassion"],
+    "moods": ["discouraged", "harsh", "encouraged"]
+  },
+  {
+    "text": "Every accomplishment starts with the decision to try.",
+    "author": "John F. Kennedy",
+    "categories": ["action", "courage"],
+    "moods": ["hesitant", "fearful", "trying"]
+  },
+  {
+    "text": "The only way to achieve the impossible is to believe it is possible.",
+    "author": "Charles Kingsleigh",
+    "categories": ["belief", "possibility"],
+    "moods": ["doubtful", "impossible", "believing"]
+  },
+  {
+    "text": "Don't let perfect be the enemy of good.",
+    "author": "Voltaire",
+    "categories": ["perfectionism", "action"],
+    "moods": ["perfectionist", "paralyzed", "acting"]
+  },
+  {
+    "text": "You can't use up creativity. The more you use, the more you have.",
+    "author": "Maya Angelou",
+    "categories": ["creativity", "abundance"],
+    "moods": ["blocked", "depleted", "creative"]
+  },
+  {
+    "text": "Success is the sum of small efforts repeated day in and day out.",
+    "author": "Robert Collier",
+    "categories": ["perseverance", "consistency"],
+    "moods": ["impatient", "inconsistent", "consistent"]
+  },
+  {
+    "text": "You don't have to control your thoughts. You just have to stop letting them control you.",
+    "author": "Dan Millman",
+    "categories": ["mindfulness", "mental_health"],
+    "moods": ["anxious", "overthinking", "calm"]
+  },
+  {
+    "text": "Be a voice, not an echo.",
+    "author": "Albert Einstein",
+    "categories": ["authenticity", "individuality"],
+    "moods": ["conforming", "echoing", "original"]
+  },
+  {
+    "text": "Happiness is an inside job.",
+    "author": "William Arthur Ward",
+    "categories": ["happiness", "inner_work"],
+    "moods": ["seeking_external", "empty", "fulfilled"]
+  },
+  {
+    "text": "The best project you'll ever work on is you.",
+    "author": "Anonymous",
+    "categories": ["self_improvement", "growth"],
+    "moods": ["neglecting_self", "distracted", "self_focused"]
+  },
+  {
+    "text": "Your journey is your own. Don't compare it to others.",
+    "author": "Anonymous",
+    "categories": ["self_acceptance", "individuality"],
+    "moods": ["comparing", "inadequate", "content"]
+  },
+  {
+    "text": "Fall in love with taking care of yourself.",
+    "author": "Anonymous",
+    "categories": ["self_care", "self_love"],
+    "moods": ["neglecting", "guilty", "caring"]
+  },
+  {
+    "text": "You are capable of amazing things.",
+    "author": "Anonymous",
+    "categories": ["encouragement", "potential"],
+    "moods": ["doubtful", "incapable", "capable"]
+  },
+  {
+    "text": "Trust the timing of your life.",
+    "author": "Anonymous",
+    "categories": ["patience", "trust"],
+    "moods": ["impatient", "frustrated", "trusting"]
+  },
+  {
+    "text": "You are exactly where you need to be.",
+    "author": "Anonymous",
+    "categories": ["acceptance", "trust"],
+    "moods": ["dissatisfied", "restless", "accepting"]
+  },
+  {
+    "text": "Be gentle with yourself. You're doing the best you can.",
+    "author": "Anonymous",
+    "categories": ["self_compassion", "kindness"],
+    "moods": ["harsh", "critical", "kind"]
+  },
+  {
+    "text": "Your pace doesn't matter. Forward is forward.",
+    "author": "Anonymous",
+    "categories": ["progress", "patience"],
+    "moods": ["slow", "frustrated", "patient"]
+  },
+  {
+    "text": "Don't be afraid to start over. It's a chance to build something better.",
+    "author": "Anonymous",
+    "categories": ["new_starts", "courage"],
+    "moods": ["fearful", "stuck", "brave"]
+  },
+  {
+    "text": "You are not your thoughts. You are the observer of your thoughts.",
+    "author": "Anonymous",
+    "categories": ["mindfulness", "awareness"],
+    "moods": ["identified", "overwhelmed", "aware"]
+  },
+  {
+    "text": "The only thing you need to be is yourself.",
+    "author": "Anonymous",
+    "categories": ["authenticity", "self_acceptance"],
+    "moods": ["trying_too_hard", "pretending", "authentic"]
+  },
+  {
+    "text": "You didn't come this far to only come this far.",
+    "author": "Anonymous",
+    "categories": ["perseverance", "motivation"],
+    "moods": ["quitting", "tired", "persistent"]
+  },
+  {
+    "text": "Growth is painful. Change is painful. But nothing is as painful as staying stuck.",
+    "author": "Anonymous",
+    "categories": ["growth", "change"],
+    "moods": ["resistant", "fearful", "growing"]
+  },
+  {
+    "text": "You've survived 100% of your worst days. You're doing great.",
+    "author": "Anonymous",
+    "categories": ["resilience", "encouragement"],
+    "moods": ["struggling", "weak", "strong"]
+  },
+  {
+    "text": "Let go of who you think you're supposed to be and embrace who you are.",
+    "author": "Brené Brown",
+    "categories": ["authenticity", "self_acceptance"],
+    "moods": ["pressured", "inadequate", "accepting"]
+  },
+  {
+    "text": "You don't need to have it all figured out to move forward.",
+    "author": "Anonymous",
+    "categories": ["action", "uncertainty"],
+    "moods": ["confused", "paralyzed", "moving"]
+  },
+  {
+    "text": "Your story is not over yet.",
+    "author": "Anonymous",
+    "categories": ["hope", "perseverance"],
+    "moods": ["hopeless", "defeated", "hopeful"]
+  },
+  {
+    "text": "Small progress is still progress.",
+    "author": "Anonymous",
+    "categories": ["progress", "patience"],
+    "moods": ["frustrated", "impatient", "encouraged"]
+  },
+  {
+    "text": "You are worthy of love and belonging.",
+    "author": "Brené Brown",
+    "categories": ["self_worth", "belonging"],
+    "moods": ["unworthy", "rejected", "worthy"]
+  },
+  {
+    "text": "The best time for new beginnings is now.",
+    "author": "Anonymous",
+    "categories": ["new_starts", "action"],
+    "moods": ["waiting", "hesitant", "starting"]
+  },
+  {
+    "text": "You are more than your mistakes.",
+    "author": "Anonymous",
+    "categories": ["self_acceptance", "forgiveness"],
+    "moods": ["guilty", "ashamed", "forgiving"]
+  },
+  {
+    "text": "Every day may not be good, but there's something good in every day.",
+    "author": "Alice Morse Earle",
+    "categories": ["gratitude", "perspective"],
+    "moods": ["negative", "pessimistic", "grateful"]
+  },
+  {
+    "text": "You are not defined by your past. You are prepared by it.",
+    "author": "Joel Osteen",
+    "categories": ["growth", "resilience"],
+    "moods": ["ashamed", "stuck", "growing"]
+  },
+  {
+    "text": "You don't need permission to grow.",
+    "author": "Anonymous",
+    "categories": ["empowerment", "growth"],
+    "moods": ["waiting", "dependent", "independent"]
+  },
+  {
+    "text": "Your feelings are valid. Your experience is real. You matter.",
+    "author": "Anonymous",
+    "categories": ["validation", "self_worth"],
+    "moods": ["invalidated", "dismissed", "validated"]
+  },
+  {
+    "text": "You are not too much. You are more than enough.",
+    "author": "Anonymous",
+    "categories": ["self_worth", "acceptance"],
+    "moods": ["too_much", "unworthy", "enough"]
+  },
+  {
+    "text": "Comparison is the thief of joy.",
+    "author": "Theodore Roosevelt",
+    "categories": ["contentment", "self_acceptance"],
+    "moods": ["comparing", "jealous", "content"]
+  },
+  {
+    "text": "You are the sky. Everything else is just weather.",
+    "author": "Pema Chödrön",
+    "categories": ["mindfulness", "perspective"],
+    "moods": ["overwhelmed", "temporary", "grounded"]
+  },
+  {
+    "text": "Progress is impossible without change.",
+    "author": "George Bernard Shaw",
+    "categories": ["change", "growth"],
+    "moods": ["resistant", "stuck", "changing"]
+  },
+  {
+    "text": "You are learning, growing, and evolving every single day.",
+    "author": "Anonymous",
+    "categories": ["growth", "encouragement"],
+    "moods": ["stagnant", "stuck", "growing"]
+  },
+  {
+    "text": "The darkest nights produce the brightest stars.",
+    "author": "Anonymous",
+    "categories": ["hope", "resilience"],
+    "moods": ["dark", "despairing", "hopeful"]
+  },
+  {
+    "text": "You are brave for showing up today.",
+    "author": "Anonymous",
+    "categories": ["courage", "validation"],
+    "moods": ["struggling", "defeated", "brave"]
+  },
+  {
+    "text": "Rest and self-care are so important. When you take time to replenish your spirit, it allows you to serve others from the overflow.",
+    "author": "Eleanor Brownn",
+    "categories": ["self_care", "balance"],
+    "moods": ["depleted", "guilty", "balanced"]
+  },
+  {
+    "text": "You are allowed to outgrow people who no longer serve your highest good.",
+    "author": "Anonymous",
+    "categories": ["boundaries", "growth"],
+    "moods": ["guilty", "obligated", "free"]
+  },
+  {
+    "text": "Your mental health matters more than their expectations.",
+    "author": "Anonymous",
+    "categories": ["boundaries", "self_care"],
+    "moods": ["pressured", "overwhelmed", "prioritizing"]
+  },
+  {
+    "text": "Sometimes the bravest thing you can do is keep going.",
+    "author": "Anonymous",
+    "categories": ["courage", "perseverance"],
+    "moods": ["exhausted", "quitting", "persisting"]
+  },
+  {
+    "text": "You are not a before picture. You are not an after picture. You are a happening.",
+    "author": "Anonymous",
+    "categories": ["self_acceptance", "process"],
+    "moods": ["inadequate", "judging", "accepting"]
+  },
+  {
+    "text": "Be proud of yourself for how far you've come, and have faith in how far you can go.",
+    "author": "Anonymous",
+    "categories": ["encouragement", "faith"],
+    "moods": ["discouraged", "doubtful", "encouraged"]
+  }
+]
