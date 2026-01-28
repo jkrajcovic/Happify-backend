@@ -1,0 +1,53 @@
+# Firebase
+GoogleService-Info.plist
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+database-debug.log
+pubsub-debug.log
+
+# Cloud Functions
+functions/node_modules/
+functions/.env
+functions/lib/
+functions/*.log
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# API Keys & Secrets
+*.plist
+serviceAccountKey.json
+service-account-key.json
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build outputs
+build/
+dist/
+lib/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
