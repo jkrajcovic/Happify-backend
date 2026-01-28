@@ -1,11 +1,17 @@
 /**
  * Happify 2 Cloud Functions
  *
- * AI-powered quote generation and personalized notifications
+ * AI-powered contextual motivational messages and personalized notifications
+ *
+ * NEW ARCHITECTURE:
+ * - Generate fresh AI message on EVERY mood entry (no cache-first logic)
+ * - Richer context: long-term emotional trend, yesterday's mood/notes
+ * - Cache result for 24 hours (for display purposes only)
+ * - More empathetic, personal responses
  *
  * Security: Gemini API key stored in Cloud Functions config, never exposed to client
- * Cost Control: Rate limiting, caching, and budget cap
- * Reliability: Graceful fallbacks at every level
+ * Cost Control: Budget cap ($20/month) with graceful fallback
+ * Reliability: Graceful fallbacks to static quotes
  */
 
 import * as functions from 'firebase-functions';
@@ -24,20 +30,25 @@ const genAI = new GoogleGenerativeAI(
 const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
 /**
- * Generate personalized quote via Gemini AI
+ * Generate personalized motivational message via Gemini AI
+ *
+ * NEW LOGIC: Generates fresh message on EVERY mood entry
+ * - No cache-first checking (call AI directly)
+ * - Cache result for 24 hours (for display purposes only)
+ * - Richer context: long-term emotional trend, yesterday's mood/notes
+ * - More empathetic, personal responses
  *
  * HTTPS Callable function - secure, authenticated
  *
  * Features:
- * - Rate limiting: 5 quotes per day per user
- * - 3-level caching: local, Firestore, global
  * - Budget cap: $20/month with auto-fallback
  * - Graceful degradation: never returns errors to user
+ * - Quota removed: Generate on every mood entry
  *
- * @param data.mood - User's current mood (e.g., "sad", "happy")
- * @param data.expectations - User's focus areas (e.g., ["work_stress", "anxiety"])
- * @param data.timeOfDay - Time of day (e.g., "morning", "evening")
- * @returns Quote object or error with fallback instructions
+ * @param data.long_term_state - Long-term emotional trend (e.g., "demotivated", "stable", "improving")
+ * @param data.yesterday_mood - Yesterday's mood (e.g., "very good", "good", "neutral", "bad", "very bad")
+ * @param data.yesterday_notes - Yesterday's notable events (e.g., "conflict at work", "nothing special")
+ * @returns Motivational message object or error with fallback instructions
  */
 export const generatePersonalizedQuote = functions.https.onCall(
   async (data, context) => {
@@ -45,57 +56,29 @@ export const generatePersonalizedQuote = functions.https.onCall(
     if (!context.auth) {
       throw new functions.https.HttpsError(
         'unauthenticated',
-        'User must be authenticated to generate quotes'
+        'User must be authenticated to generate messages'
       );
     }
 
     const userId = context.auth.uid;
-    const { mood, expectations, timeOfDay } = data;
+    const { long_term_state, yesterday_mood, yesterday_notes } = data;
 
     // Validate input
-    if (!mood || !expectations || !Array.isArray(expectations)) {
+    if (!long_term_state || !yesterday_mood) {
       throw new functions.https.HttpsError(
         'invalid-argument',
-        'Missing required fields: mood (string), expectations (array)'
+        'Missing required fields: long_term_state (string), yesterday_mood (string)'
       );
     }
 
-    functions.logger.info(`Quote request from user ${userId}`, {
-      mood,
-      expectations,
-      timeOfDay,
+    functions.logger.info(`Message request from user ${userId}`, {
+      long_term_state,
+      yesterday_mood,
+      yesterday_notes: yesterday_notes ? 'provided' : 'none',
     });
 
     try {
-      // Step 1: Check user's daily quota (5 AI quotes per day)
-      const quotaCheck = await checkUserQuota(userId);
-      if (!quotaCheck.allowed) {
-        functions.logger.warn(`User ${userId} exceeded daily quota`);
-        return {
-          success: false,
-          error: 'daily_quota_exceeded',
-          quotaRemaining: 0,
-          message:
-            "You've reached your daily AI quote limit (5/day). Try again tomorrow or use our curated quotes!",
-        };
-      }
-
-      // Step 2: Check cache first (90% hit rate target)
-      const cacheKey = generateCacheKey(mood, expectations, timeOfDay);
-      const cachedQuote = await checkCache(userId, cacheKey);
-
-      if (cachedQuote) {
-        functions.logger.info(`Cache hit for user ${userId}`, { cacheKey });
-        return {
-          success: true,
-          quote: cachedQuote,
-          source: 'cache',
-          cacheHit: true,
-          quotaRemaining: quotaCheck.remaining,
-        };
-      }
-
-      // Step 3: Check global budget cap ($20/month)
+      // Step 1: Check global budget cap ($20/month)
       const budgetOk = await checkGlobalBudget();
       if (!budgetOk) {
         functions.logger.warn('Global budget exceeded', {
@@ -109,52 +92,43 @@ export const generatePersonalizedQuote = functions.https.onCall(
         };
       }
 
-      // Step 4: Generate AI quote via Gemini
-      const prompt = buildQuotePrompt(mood, expectations, timeOfDay);
+      // Step 2: Generate AI message via Gemini (NO CACHE CHECK - always generate fresh)
+      const prompt = buildMotivationalPrompt(
+        long_term_state,
+        yesterday_mood,
+        yesterday_notes || 'nothing special'
+      );
+
       const result = await model.generateContent(prompt);
-      const response = result.response.text();
+      const response = result.response.text().trim();
 
-      // Parse JSON response from Gemini
-      let quoteData;
-      try {
-        quoteData = JSON.parse(response);
-      } catch (parseError) {
-        functions.logger.error('Failed to parse Gemini response', {
-          response,
-          error: parseError,
-        });
-        throw new Error('Invalid response format from AI');
-      }
-
-      const quote = {
-        text: quoteData.text,
-        author: quoteData.author || 'Anonymous',
-        categories: quoteData.categories || ['motivation'],
+      // Response is plain text (not JSON), just clean it up
+      const message = {
+        text: response,
         source: 'ai_generated',
         generatedAt: admin.firestore.FieldValue.serverTimestamp(),
       };
 
-      // Step 5: Save to cache (30-day TTL)
-      await saveToCache(userId, cacheKey, quote);
+      // Step 3: Save to cache (24-hour TTL for display purposes)
+      const cacheKey = generateDailyCacheKey(userId);
+      await saveToDailyCache(userId, cacheKey, message);
 
-      // Step 6: Update usage stats
+      // Step 4: Update usage stats
       await updateUsageStats(userId);
       await updateGlobalStats();
 
-      functions.logger.info(`Generated AI quote for user ${userId}`, {
-        cacheKey,
-        quotaRemaining: quotaCheck.remaining - 1,
+      functions.logger.info(`Generated AI message for user ${userId}`, {
+        long_term_state,
+        yesterday_mood,
       });
 
       return {
         success: true,
-        quote: quote,
+        message: message,
         source: 'ai_generated',
-        cacheHit: false,
-        quotaRemaining: quotaCheck.remaining - 1,
       };
     } catch (error) {
-      functions.logger.error('Error generating quote', {
+      functions.logger.error('Error generating message', {
         userId,
         error: error instanceof Error ? error.message : String(error),
         stack: error instanceof Error ? error.stack : undefined,
@@ -165,7 +139,7 @@ export const generatePersonalizedQuote = functions.https.onCall(
         success: false,
         error: 'generation_failed',
         message:
-          'Unable to generate personalized quote. Please try our curated quotes.',
+          'Unable to generate personalized message. Please try our curated quotes.',
       };
     }
   }
@@ -233,108 +207,88 @@ export const sendPersonalizedNotifications = functions.pubsub
 // ============================================================================
 
 /**
- * Build Gemini prompt for quote generation
+ * Build Gemini prompt for motivational message generation
+ * NEW: Empathetic morning messages based on emotional context
  */
-function buildQuotePrompt(
-  mood: string,
-  expectations: string[],
-  timeOfDay: string
+function buildMotivationalPrompt(
+  long_term_state: string,
+  yesterday_mood: string,
+  yesterday_notes: string
 ): string {
-  return `You are a compassionate mental wellness coach. Generate a short, uplifting motivational quote (max 20 words) for someone feeling ${mood}.
+  return `User emotional context:
 
-Context:
-- Current mood: ${mood}
-- User's focus areas: ${expectations.join(', ')}
-- Time of day: ${timeOfDay}
+Long-term emotional trend:
+${long_term_state}
+(e.g. demotivated, burned out, stable, improving, overwhelmed, confident)
 
-Requirements:
-1. Encouraging and actionable
-2. Relate to user's focus areas
-3. Max 20 words
-4. Include author (or "Anonymous")
+Yesterday's mood:
+${yesterday_mood}
+(e.g. very good, good, neutral, bad, very bad)
 
-Output JSON format (strict):
-{
-  "text": "Your quote here",
-  "author": "Author Name",
-  "categories": ["motivation", "resilience"]
-}
+Yesterday's notable events or notes:
+${yesterday_notes}
+(e.g. conflict at work, feeling ignored by boss, productive day, nothing special)
 
-IMPORTANT: Return ONLY valid JSON, no additional text or formatting.`;
+Task:
+Generate a short motivational message for today that:
+- Acknowledges the user's emotional context with empathy
+- Offers encouragement or calm reassurance
+- Optionally includes a short inspirational quote (only if it fits naturally)
+- Feels personal, not generic
+- Is suitable as a morning message in a mobile app
+
+Constraints:
+- Max 5 sentences
+- No advice, no instructions, no diagnosis
+- No repeating raw labels like "you are demotivated"
+- No emojis unless very subtle (max 1)
+
+Output only the final message text.`;
 }
 
 /**
- * Check user's daily quota (5 AI quotes per day)
+ * Generate daily cache key (one message per day)
+ * Cache key based on date only (not mood/expectations)
  */
-async function checkUserQuota(
-  userId: string
-): Promise<{ allowed: boolean; remaining: number }> {
+function generateDailyCacheKey(userId: string): string {
   const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-  const quotaRef = db
-    .collection('users')
-    .doc(userId)
-    .collection('quotaTracking')
-    .doc(today);
-
-  const quotaDoc = await quotaRef.get();
-  const currentCount = quotaDoc.exists ? quotaDoc.data()?.count || 0 : 0;
-
-  const DAILY_LIMIT = 5;
-
-  if (currentCount >= DAILY_LIMIT) {
-    return { allowed: false, remaining: 0 };
-  }
-
-  return { allowed: true, remaining: DAILY_LIMIT - currentCount };
+  return `daily_message_${today}`;
 }
 
 /**
- * Generate cache key from parameters
+ * Save message to daily cache (24-hour TTL)
+ * Used for display purposes (user can see same message if they revisit today)
  */
-function generateCacheKey(
-  mood: string,
-  expectations: string[],
-  timeOfDay: string
-): string {
-  const sortedExpectations = expectations.sort().join('_');
-  return `${mood}_${sortedExpectations}_${timeOfDay}`.toLowerCase();
-}
-
-/**
- * Check cache for existing quote
- */
-async function checkCache(
+async function saveToDailyCache(
   userId: string,
-  cacheKey: string
-): Promise<any | null> {
-  const cacheRef = db
+  cacheKey: string,
+  message: any
+): Promise<void> {
+  const expiresAt = new Date();
+  expiresAt.setHours(expiresAt.getHours() + 24); // 24-hour expiration
+
+  await db
     .collection('users')
     .doc(userId)
-    .collection('aiQuoteCache')
-    .doc(cacheKey);
+    .collection('aiMessageCache')
+    .doc(cacheKey)
+    .set({
+      ...message,
+      expiresAt: admin.firestore.Timestamp.fromDate(expiresAt),
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
 
-  const cacheDoc = await cacheRef.get();
-
-  if (cacheDoc.exists) {
-    const data = cacheDoc.data();
-    const expiresAt = data?.expiresAt?.toDate();
-
-    // Check if cache is still valid (30 days)
-    if (expiresAt && expiresAt > new Date()) {
-      return {
-        text: data.text,
-        author: data.author,
-        categories: data.categories,
-        source: 'cache',
-      };
-    }
-  }
-
-  return null;
+  functions.logger.info(`Saved message to 24h cache`, {
+    userId,
+    cacheKey,
+    expiresAt: expiresAt.toISOString(),
+  });
 }
 
 /**
- * Save quote to cache (30-day TTL)
+ * Get today's cached message (if exists and not expired)
+ * Optional: iOS app can use this to display same message throughout the day
+ */
  */
 async function saveToCache(
   userId: string,
@@ -362,18 +316,22 @@ async function saveToCache(
 /**
  * Update user usage stats
  */
+/**
+ * Update user's AI usage stats
+ * Track total AI messages generated (no quota limit in new logic)
+ */
 async function updateUsageStats(userId: string): Promise<void> {
   const today = new Date().toISOString().split('T')[0];
-  const quotaRef = db
+  const statsRef = db
     .collection('users')
     .doc(userId)
-    .collection('quotaTracking')
+    .collection('aiStats')
     .doc(today);
 
-  await quotaRef.set(
+  await statsRef.set(
     {
-      count: admin.firestore.FieldValue.increment(1),
-      lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+      messagesGenerated: admin.firestore.FieldValue.increment(1),
+      lastGenerated: admin.firestore.FieldValue.serverTimestamp(),
     },
     { merge: true }
   );
