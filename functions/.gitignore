@@ -1,0 +1,29 @@
+# Compiled JavaScript files
+lib/
+*.js
+!.eslintrc.js
+*.js.map
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build outputs
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store

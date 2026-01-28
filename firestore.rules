@@ -1,0 +1,54 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper function: Check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function: Check if user owns the document
+    function isOwner(userID) {
+      return isAuthenticated() && request.auth.uid == userID;
+    }
+
+    // User data - only accessible by the user themselves
+    match /users/{userID} {
+      allow read, write: if isOwner(userID);
+
+      // User profile
+      match /profile {
+        allow read, write: if isOwner(userID);
+      }
+
+      // Mood entries subcollection
+      match /moodEntries/{entryID} {
+        allow read, write: if isOwner(userID);
+      }
+
+      // AI quote cache (read by user, written by Cloud Functions)
+      match /aiQuoteCache/{cacheKey} {
+        allow read: if isOwner(userID);
+        allow write: if false; // Only Cloud Functions can write
+      }
+
+      // Quota tracking (read by user, written by Cloud Functions)
+      match /quotaTracking/{date} {
+        allow read: if isOwner(userID);
+        allow write: if false; // Only Cloud Functions can write
+      }
+    }
+
+    // Global configuration (read-only for authenticated users)
+    match /globalConfig/{document} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admins via console
+    }
+
+    // Admin stats (only Cloud Functions can read/write)
+    match /adminStats/{document} {
+      allow read, write: if false; // Only Cloud Functions
+    }
+  }
+}
